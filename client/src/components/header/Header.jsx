@@ -1,8 +1,8 @@
 import React, {useState, useContext} from 'react';
 import { Container, Logo, Search, Button, InputSearch, Block } from './Header elemenst';
-import {SearchPlanet} from '../../contex/SearchPlanet'
+import {SearchPlanet} from '../../contex/UseSearchPlanet'
 import {FaSearch} from 'react-icons/fa'
-
+import {NavLink} from 'react-router-dom'
 const Header = () => {
     
     const { handleSearch } = useContext(SearchPlanet)
@@ -22,6 +22,9 @@ const Header = () => {
                     <FaSearch />
                 </Button>
             </Search>
+            <NavLink to='/favorites'>
+                Me Favorites
+            </NavLink>
             <Logo src='/images/logo.png'/>
         </Container>
         <Block>

@@ -9,6 +9,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content:  space-evenly;
+    font-family: 'Days One';
+    .unselected{
+        color: darkred;
+        user-select: none;
+        cursor: no-drop;
+    }
 `;
 export const ButtonPre = styled.button`
     border: 1px solid white;
@@ -35,4 +41,5 @@ export const ButtonNext = styled.button`
     padding: 3px;
     background: #000000c2;
     border-radius: 5px;
+   
 `;

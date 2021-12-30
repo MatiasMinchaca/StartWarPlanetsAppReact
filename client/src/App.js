@@ -6,10 +6,12 @@ import { BrowserRouter as Router,
   Route } from 'react-router-dom';
 import Loading from './components/loading/Loading'
 import Header from './components/header/Header';
-import SearchPlanetProvider from './contex/SearchPlanet';
+import SearchPlanetProvider from './contex/UseSearchPlanet';
 import React from 'react';
-import PrevNextProvider from './contex/PreNext';
+import PrevNextProvider from './contex/UsePreNext';
 import FindPlanet from './components/findPlanet/FIndPlanet'
+import FavoriteProvider from './contex/UseFavorite';
+import Favorite from './components/favorite/Favorite';
 
 const AllPlanets = gql`
   query {
@@ -30,20 +32,28 @@ function App() {
     <Router>
         <SearchPlanetProvider>
           <PrevNextProvider>
-          <Header />
-          <Routes>
-            <Route path='/' element={
-              loading ?
-              <Loading /> :
-              <Planets planets={data?.allPlanets}/>
-            }/>
-            <Route  path='search' element={ 
-              loading ?
-              <Loading /> :
-              <FindPlanet planets={data?.allPlanets} />
-            } />
-          </Routes>
-              </PrevNextProvider>
+            <FavoriteProvider>
+              <Header />
+              <Routes>
+                <Route path='/' element={
+                  loading ?
+                  <Loading /> :
+                  <Planets planets={data?.allPlanets}/>
+                }/>
+                <Route  path='/search' element={ 
+                  loading ?
+                  <Loading /> :
+                  <FindPlanet planets={data?.allPlanets} />
+                } />
+                <Route  path='/favorites' element={ 
+                  loading ?
+                  <Loading /> :
+                  <Favorite />
+                } />
+                
+              </Routes>
+            </FavoriteProvider>
+          </PrevNextProvider>
           </SearchPlanetProvider>
       </Router>
     

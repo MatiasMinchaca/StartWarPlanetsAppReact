@@ -11,6 +11,16 @@ export const Container = styled.header`
     top: 0;
     left: 0;
     background: #ffffff26;
+    z-index: 100;
+    a{
+        text-decoration: none;
+        color: white;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Days One';
+    }
 `;
 
 export const Block = styled.div`
@@ -19,12 +29,13 @@ export const Block = styled.div`
 `;
 
 export const Search = styled.div`
-    width: 300px;
+    width: 200px;
     height: 30px;
     position: relative;
 `;
 
 export const InputSearch = styled.input`
+    font-family: 'Days One';
     outline: none;
     width: 100%;
     height: 100%;

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { SearchPlanet } from '../../contex/SearchPlanet';
-import { Container, Card } from './FindPlanet elements';
+import { SearchPlanet } from '../../contex/UseSearchPlanet';
+import { Container, Card, FavoriteButton } from './FindPlanet elements';
 import {
     FaArrowLeft} from 'react-icons/fa'
 import styled from 'styled-components';
-import { PreNextContext } from '../../contex/PreNext';
+import { PreNextContext } from '../../contex/UsePreNext';
+import { FavoriteContext } from '../../contex/UseFavorite';
 
 const Close = styled.div`
     width: 100%;
@@ -36,6 +37,8 @@ const FIndPlanet = ({planets}) => {
 //@ts-check
     const {afterPage} = useContext(PreNextContext)
 
+    const {handleFavorites, favorites} = useContext(FavoriteContext)
+
     const { search } = useContext(SearchPlanet)
     
     if(!planets) return null
@@ -47,6 +50,14 @@ const FIndPlanet = ({planets}) => {
             {
                 planet !== undefined ?
                 <Card key={planet.name}>
+                    <FavoriteButton onClick={handleFavorites} className={
+                                favorites.map(fav => fav.name == planet.name ? 'disable' : '')}>
+                        Add favorite
+                        <p name={planet.name}></p>
+                        <p name={planet.climate}></p>
+                        <p name={planet.diameter}></p>
+                        <p name={planet.terrain}></p>
+                    </FavoriteButton>
                     <h2>
                         {planet.name}
                     </h2>
@@ -55,8 +66,8 @@ const FIndPlanet = ({planets}) => {
                     <p>Terrain: {planet.terrain}</p>
                 </Card> :
                 search == 0?
-                <h2>Aqui veras los resultados de tu busqueda</h2>:
-                <h2>No hay resultados para la busqueda: {search}</h2>
+                <h2>Here you will see the results of your search</h2>:
+                <h2>No search results: {search}</h2>
             }
         </Container>
         <Close>

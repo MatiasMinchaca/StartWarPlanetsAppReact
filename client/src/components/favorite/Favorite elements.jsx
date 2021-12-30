@@ -7,19 +7,35 @@ export const Container = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    h2{
-        color: white;
+    padding-bottom: 100px;
+    a{
         width: 100%;
-        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        text-decoration: none;
+        p{
+            border: 1px solid white;
+            color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 80px;
+            cursor: pointer;
+            padding: 3px;
+            background: #000000c2;
+            border-radius: 5px;
+            text-decoration: none;
+        }
     }
-    a{
+    h2{
         color: white;
-    }
-    .disable{
-        display: none;
+        text-align: center;
     }
 `;
 
@@ -58,4 +74,21 @@ export const FavoriteButton = styled.button`
     padding: 5px;
     background: none;
     cursor: pointer;
+`;
+
+export const RemoveFavoriteButton = styled.button`
+    font-family: 'Days One';
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 5px;
+    background: none;
+    cursor: pointer;
+    p{
+        display: none;
+    }
 `;
