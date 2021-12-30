@@ -1,0 +1,64 @@
+{
+    "planets": [
+        {
+            "name": "Tatooine",
+            "diameter": "10465",
+            "climate": "arid",
+            "terrain": "desert"
+        },
+        {
+            "name": "Alderaan",
+            "diameter": "12500",
+            "climate": "temperate",
+            "terrain": "grasslands, mountains"
+        },
+        {
+			"name": "Yavin IV",
+			"diameter": "10200",
+			"climate": "temperate, tropical",
+			"terrain": "jungle, rainforests"
+		},
+        {
+            "name": "Hoth",
+            "diameter": "7200",
+            "climate": "frozen",
+            "terrain": "tundra, ice caves, mountain ranges"
+        },
+        {
+            "name": "Dagobah",
+            "diameter": "8900",
+            "climate": "murky",
+            "terrain": "swamp, jungles"
+        },
+        {
+            "name": "Bespin",
+            "diameter": "118000",
+            "climate": "temperate",
+            "terrain": "gas giant"
+        },
+        {
+            "name": "Endor",
+            "diameter": "4900",
+            "climate": "temperate",
+            "terrain": "forests, mountains, lakes"
+        },
+        {
+            "name": "Naboo",
+            "diameter": "12120",
+            "climate": "temperate",
+            "terrain": "grassy hills, swamps, forests, mountains"
+        },
+        {
+            "name": "Coruscant",
+            "diameter": "12240",
+            "climate": "temperate",
+            "terrain": "cityscape, mountains"
+        },
+        {
+            "name": "Kamino",
+            "diameter": "19720",
+            "climate": "temperate",
+            "terrain": "ocean"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+body {
+    background-image: url('/public/images/background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+    scrollbar-color: linear-gradient(180deg,rgb(92, 1, 1), rgb(250, 250, 250));
+    scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+} 
+body::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,rgb(92, 1, 1), rgb(250, 250, 250));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.titlePlanets{
+    font-family: 'Days One';
+    text-align: center;
+    color: white;
+}
+.close{
+    border: 1px solid white;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 70px;
+    cursor: pointer;
+    padding: 3px;
+    background: #000000c2;
+    border-radius: 5px;
+}
