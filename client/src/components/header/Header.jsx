@@ -23,7 +23,7 @@ const Header = () => {
                 </Button>
             </Search>
             <NavLink to='/favorites'>
-                Me Favorites
+                My favourites
             </NavLink>
             <Logo src='/images/logo.png'/>
         </Container>
